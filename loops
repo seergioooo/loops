@@ -1,0 +1,113 @@
+public class Loops {
+
+    public static void main(String[] args) {
+        loop1to10While();
+        looptoWhileEjercicio1();
+        //Escribir por pantalla del 10 al -1
+        loop1to10DoWhile();
+        looptoDoWhileEjercicio1();
+        //Mostrar del 2 al 20 pero solo los números pares
+        looptoDoWhileEjercicio2();
+        //Mostrar del 20 al 2 pero solo los números impares
+        looptoDoWhileEjercicio3();
+        //Pedir números al usuario y mostrarlos por pantalla hasta que introduzca un 6
+        looptoDoWhileEjercicio4();
+        /*Pedimos dos números al usuario y mostramos el siguiente menú:
+          1._ Sumar
+          2._ Restar
+          3._ Multiplicar
+          4._ Dividir
+          5._ Salir
+          Le pedimos al usuario que introduzca la opción deseada, hacemos lo 
+          correspondiente a dicha opción, mostramos el resultado por pantallay
+          volvemos a mostrar el menú. SOLO SALIMOSSI EL USUARIO INTRODUCE UN G.
+        */
+    }
+    
+    public static void loop1to10While(){
+        byte i;
+        i = 1;
+        System.out.println("Entro dentro");
+        while (i<=10) {
+            System.out.print(i + " ");
+            i++;
+        }
+        System.out.println("\nFIN!");
+
+    }
+    
+    public static void looptoWhileEjercicio1(){
+        //Escribir por pantalla del 10 al -1
+        byte a;
+        a = 10;
+        System.out.println("Números del 10 al -1");
+        while (a>=-1) {
+            System.out.print(a + " ");
+            a--;
+        }
+        System.out.println("\nFIN!");
+        
+    }
+    
+    public static void loop1to10DoWhile(){
+        byte i;
+        i = 1;
+        System.out.println("Entro dentro");
+        do{
+            System.out.print(i + " ");
+            i++;
+        } while (i<=10);
+        System.out.println("\nFIN!");
+        
+    }
+    
+    public static void looptoDoWhileEjercicio1(){
+        //Mostrar del 2 al 20 pero solo los números pares
+        byte i;
+        i = 2;
+        System.out.println("Los números pares del 1 al 20 son: ");
+        do {
+            System.out.print(i + " ");
+            i++;
+            i++;
+        } while (i<=20);
+        System.out.println("\nFIN!");
+                
+    }
+    
+    public static void looptoDoWhileEjercicio2(){
+        byte i;
+        i = 20;
+        i--;
+        System.out.println("Lo números impares del 20 al 2 son: ");
+        do {
+            System.out.print(i + " ");
+            i--;
+            i--;
+        } while (i>2);
+        System.out.println( "\nFIN!");
+                
+    }
+    
+    public static void looptoDoWhileEjercicio3(){
+        //Pedir números al usuario y mostrarlos por pantalla hasta que introduzca un 6
+        int a = 0;
+        while (a!=6){
+            a = Integer.parseInt(JOptionPane.showInputDialog("Introduce un número"));
+        }
+    }
+   
+    public static void looptoDoWhileEjercicio4(){
+        /*Pedimos dos números al usuario y mostramos el siguiente menú:
+          1._ Sumar
+          2._ Restar
+          3._ Multiplicar
+          4._ Dividir
+          5._ Salir
+          Le pedimos al usuario que introduzca la opción deseada, hacemos lo 
+          correspondiente a dicha opción, mostramos el resultado por pantallay
+          volvemos a mostrar el menú. SOLO SALIMOS SI EL USUARIO INTRODUCE UN G.
+        */
+    }
+
+}
