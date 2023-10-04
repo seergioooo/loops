@@ -1,0 +1,86 @@
+public class Ejerbasicosjava {
+
+    public static void main(String[] args) {
+        ejercicio1_1();
+//        ejercicio1_5();
+//        ejercicio1_6();
+//        ejercicio1_8();
+    }
+    
+    public static void ejercicio1_1 () {
+        //Pedir los coeficientes de una ecuación se 2º grado, y muestre sus soluciones reales. 
+        //Si no existen debe indicarlo.
+        Scanner ecuacion =new Scanner (System.in);
+        //Ecuación de 2o grado: ax2+ bx + c = 0
+        int a, b, c, x1, x2;
+        System.out.println("Inserte un valor para la a: ");
+        a = ecuacion.nextInt();
+        System.out.println("Inserte un valor para la b: ");
+        b = ecuacion.nextInt();
+        System.out.println("Inserte un valor para la c: ");
+        c = ecuacion.nextInt();
+        double discriminante = b*b-4*a*c; 
+        if (discriminante > 0) {
+            double raiz1 = (-b + Math.sqrt(discriminante)/ (2*a));
+            double raiz2 = (-b - Math.sqrt(discriminante)/ (2*a));
+            
+            System.out.println("Los resultados son: ");
+            System.out.println("El resultado de x1 es: " + raiz1);
+            System.out.println("El resultado de x2 es: " + raiz2);
+        } else {
+            //sin solución
+            System.out.println("No existen soluciones");
+        }
+            
+
+    }
+
+    public static void ejercicio1_5(){
+        //Pedir un número e indicar si es positivo o negativo.
+        Scanner keyboard=new Scanner(System.in);
+        int a;
+        System.out.println("Ingrese un numero");
+        a=keyboard.nextInt();
+        if(a>0)
+        System.out.println("Este número es positivo");
+        else {
+            System.out.println("Este número es negativo");
+        }
+    }
+    
+    public static void ejercicio1_6(){
+        //Pedir dos números y decir si uno es múltiplo del otro.
+        Scanner keyboard = new Scanner(System.in);
+        int num1, num2;
+        System.out.println("Introduce un número entero: ");
+        num1=keyboard.nextInt();
+        System.out.println("Introduce otro número entero: ");
+        num2=keyboard.nextInt();
+        if (num1%num2 == 0) {
+            System.out.println("Son múltiplos");
+        } 
+
+        else {
+            System.out.println("No son múltiplos");
+        }
+
+    }
+    
+    public static void ejercicio1_8(){
+        //Pedir dos números y decir cuál es el mayor.
+        Scanner keyboard = new Scanner(System.in);
+        int num1, num2;
+        System.out.println("Introduce un número: ");
+        num1=keyboard.nextInt();
+        System.out.println("Introduce otro número: ");
+        num2=keyboard.nextInt();
+        
+        if (num1>num2) {
+            System.out.println("Es mayor el número: " + num1);
+        }
+        else {
+            System.out.println("Es menor el número: " + num1);
+        }
+    }
+
+}
