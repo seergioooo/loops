@@ -1,0 +1,141 @@
+public class Operators {
+
+    public static void main(String[] args) {
+        //Comparaciones
+        comparators();
+        module ();
+        shortOperators();
+
+        //post-incremento y pre-incremento
+        plusPlus();
+        //relacionales y lógicos
+        //relacionales: <, <=, >, >)=
+        //OPERADORES LÓGICOS: AND (&&), OR (||), NOT, XOR
+        logicOperators();
+    }
+
+    public static void comparators() {
+        //Igualdades numéricas
+        //Pedimos por teclado los número float
+        float number1, number2;
+        number1 = Float.parseFloat(JOptionPane.showInputDialog("Type a float number"));
+        number2 = Float.parseFloat(JOptionPane.showInputDialog("Type a float number"));
+        if (number1 == number2) {
+            System.out.println("Los números son iguales");
+        } else {
+            System.out.println("Los números son diferentes");
+        }
+
+        //Igualdades con String
+        String cadena;
+        cadena = JOptionPane.showInputDialog("Type a phrase");
+        if (cadena.equalsIgnoreCase("yes")) {
+            System.out.println("Respuesta Afirmativa");
+        } else {
+            System.out.println("No Respuesta Afirmativa");
+        }
+        //Igualdades con char
+    }
+
+    public static void module() {
+        //Trabajamos con el módulo y el valor absoluto
+        int number1, number2, result;
+
+        //Averiguamos el módulo
+        number1 = 675;
+        number2 = 31;
+        result = number1 % number2;
+        System.out.println("Módulo: " + result);
+
+        //Valor absoluto
+        System.out.println("El valor absoluto de -3 es: " + Math.abs(-3));
+    }
+
+    public static void shortOperators() {
+        //+=, -=, *=, /=, %=
+        int c, d;
+        float a, b;
+        a = 5.5f;
+        b = 3;
+
+        double result;
+        a += b; // a = a + b; a = a-b; a = a*b; 
+        System.out.println("El resultado es " + a);
+
+        a = 5;
+        a /= b; // a = a/b;
+        System.out.println("El resultado es " + a);
+    }
+
+    public static void plusPlus() {
+        int a, b, c, d;
+        a = 4;
+        b = 8;
+
+        //El operador post-incremento: a++, y el operador pre-incremento: ++a
+        a++;
+        b--;
+        System.out.println("Valor después de incrementarlo: " + a + " " + b);
+
+        //Combinación de asignación y post/pre-incremento
+        a = 4;
+        b = 8;
+        a = ++b;
+        System.out.println("Preincremento\nA: " + a + " B: " + b);
+
+        a = 4;
+        b = 8;
+        a = (b + 1);
+        System.out.println("Preincremento\nA: " + a + " B: " + b);
+
+        //Postincrementos
+        a = 4;
+        b = 8;
+        c = 3;
+        d = a++ - b + c--;
+        System.out.println(a + " " + b + " " + c + " " + d);
+
+        //Preincrementos
+        a = 4;
+        b = 8;
+        c = 3;
+        d = ++a - b + c--;
+        System.out.println(a + " " + b + " " + c + " " + d);
+
+    }
+
+    public static void logicOperators() {
+        //AND
+        //A Lorena le gustan los chicos con ojos marrones y con cabello oscuro
+        boolean darkHair = true;
+        boolean brownEyes = true;
+        if (darkHair && brownEyes) {
+            System.out.println("Lorena says: wooowww!!1 What a pibon you");
+        } else {
+            System.out.println("Lorena says: fuckkk!!! Go to home, yankeee!!");
+        }
+        //OR
+        //A Fran le gustan las chicas con los ojos azules o rubias
+        String hair = "Blonde";
+        String eyes = "Blue eyes";
+        if (hair.equalsIgnoreCase("Blonde")
+                || eyes.equalsIgnoreCase("blue")) {
+            System.out.println("Fran says: wooow, what a pibon you");
+        } else {
+            System.out.println("Fran says: bye, bye!!");
+        }
+        //NOT (!)
+        //A Rut Galera le gustan los chicos que tengan los ojos verdes y no sean rubios
+        boolean blondeHair = true;
+        boolean greenEyes = true;
+        
+        if (greenEyes && !blondeHair){
+            System.out.println("Ohh, yeah!, I like it! Ven pa' cá");
+        } else {
+            System.out.println("Tira pa' tu casa, anda");
+        }
+    
+        //XOR (?)
+    }
+
+}
