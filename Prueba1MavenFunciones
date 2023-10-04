@@ -1,0 +1,130 @@
+public class Prueba1MavenFunciones {
+
+    public static void main(String[] args) {
+        System.out.println("Voy a entrar en la funcion areas");
+        areas();
+        System.out.println("He salido de la función areas");
+        workingScanner();
+        workingPrintf();
+        workingJO();
+
+    }
+    
+    public static void areas(){
+            //PRIMER PROGRAMA: CALCULAR PORCENTAJE
+        int mark1;
+        mark1= 7;
+        float mark2= 2.8f;
+        final float PERCENTAGE1 = 0.6f;
+        final double PERCENTAGE2 = 0.4;
+        double finalResult;
+       
+        finalResult = (mark1 * PERCENTAGE1) + (mark2 * PERCENTAGE2);
+       System.out.println("Your final result is:" + finalResult);
+       
+        //SEGUNDO PROGRAMA: AREA RECTANGULO
+        int b;
+        b = 5;
+        float h = 3.8f;
+        double finalOpe;
+        finalOpe = (b * h);
+        System.out.println("The final area of a rectangle with a base of " + b +
+                " and height " + h + " is: " + finalOpe);
+       
+        //TERCER PROGRAMA: AREA CIRCULO
+        float radius = 6.6f;
+        double finalRadius;
+        finalRadius = (radius * radius);
+        float pi = 3.14f;
+        double finalOperation;
+        finalOperation = (pi * finalRadius);
+        System.out.println(" The final area of a circle with a radius of " +
+                radius + " and pi is: " + finalOperation);
+    }
+    
+    public static void workingScanner () {
+        //Trabajamos entrada por teclado
+        //Definimos variable teclado
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Please, type a number (integer)");
+        int number1 = keyboard.nextInt();
+        System.out.println("the number type in is:" + number1);
+      
+        System.out.println("Please, type a number (double)");
+        double number2 = keyboard.nextFloat();
+        System.out.println("The number type in is: " + number2);
+        
+        //Leemos una palabra
+        System.out.println("Please, type a word");
+        String word = keyboard.next();
+        System.out.println("The phrase is " + word);
+ 
+        //Esto falla por que no hemos limpiado el buffer
+        //Limpiamos el buffer
+        keyboard.nextLine();
+        
+        //Leemos una frase
+        System.out.println("Please, type a phrase");
+        String phrase = keyboard.nextLine();
+        System.out.println("The phrase is " + phrase);
+        
+        //Leemos un caracter
+        System.out.println("Please, type a word");
+        char characther = keyboard.nextLine().charAt(2);
+        System.out.println("The characther is: " + characther);
+                
+    }
+    
+    public static void workingPrintf(){
+        //Salida de datos con printf
+        int number1 = 45;
+        double number2 = 45.6;
+        System.out.printf("The first number is %d, the second one is %.2f" ,
+                number1,  number2);
+        System.out.println("");
+        System.out.println("The first number is " + number1 + " and the second one "
+                + number2);
+        
+        /*Pedir por teclado el nombre de la hermana del usuario y los años
+        que tiene. Pedir también el nombre de la segunda hermana del usuario
+        y sus años. Mostrar usando printf, el nombre y la edad de la primera
+        hermana y de la segunda hermana y la media aritmética de las dos edades*/
+        Scanner entrada = new Scanner(System.in);
+        String nhermana1 = entrada.nextLine();
+        String nhermana2 = entrada.nextLine();
+        System.out.println("The name of the sister 1 is: ");
+        System.out.println("The name of the sister 2 is:");
+                  
+        int edadhermana1 = entrada.nextInt();
+        int edadhermana2 = entrada.nextInt();
+        System.out.println("The age of the sister 1 is: ");
+        System.out.println("The age of the sister 2 is:");
+          
+        System.out.println("sister1 name" + nhermana1 + "Sister2 name" + nhermana2 );
+        System.out.println("sister1 age"+ edadhermana1 + "Sister2 age" + edadhermana2);
+        System.out.printf("the name of the sister1 is %s, and the age of the sister2 is %d" ,
+                nhermana1 , edadhermana1);
+        System.out.printf("the name of the sister2 is %s, and the age of the sister2 is %d" ,
+                nhermana2, edadhermana2);
+        
+    }
+    
+    public static void workingJO() {
+        //Lo próximo es el JOptionPane
+        String input = JOptionPane.showInputDialog("Please, type in a string");
+        JOptionPane.showMessageDialog(null,  "Your String is: " + input);
+        
+        double realNumber = Double.parseDouble( JOptionPane.showInputDialog("Please, type in a real number"));
+        JOptionPane.showMessageDialog( null, "Your number is " + realNumber);
+        
+        //Leer un carácter y un entero
+        //ENTERO:
+        int numberInt = Integer.parseInt(JOptionPane.showInputDialog("Please, type in a real number "));
+        JOptionPane.showMessageDialog(null, "Your letter is: " + numberInt);
+        
+        //CARÁCTER:
+        char myChar = JOptionPane.showInputDialog("Please, type in a letter").charAt(0);
+        JOptionPane.showMessageDialog(null, "Your leter is " + myChar);
+        
+    }
+}
